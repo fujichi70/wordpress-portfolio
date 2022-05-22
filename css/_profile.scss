@@ -1,0 +1,147 @@
+@import "../css/common";
+@import "../css/header";
+@import "../css/footer";
+
+// レイアウト
+section {
+    margin: 50px 50px 100px;
+}
+
+// 共通タイトル（メイン）
+.main-title--box {
+    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    .main-title {
+        font-size: 45px;
+    }
+    .main-title--sub {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}
+
+// 共通タイトル（サブ）
+.sub-title {
+    font-size: 23px;
+    color: burlywood;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.text {
+    letter-spacing: 6px;
+    line-height: 24px;
+}
+
+#main {
+    letter-spacing: 2px;
+    a {
+        justify-content: space-around;
+    }
+
+    .main-profile {
+        justify-content: space-around;
+
+        .main-profile--img {
+            width: 40%;
+        }
+
+        .main-profile--name {
+            font-size: 30px;
+        }
+
+        .cv {
+            .cv-table {
+                font-size: 16px;
+                border-collapse: collapse;
+                border-top: 1px dotted #2e3033;
+
+                .cv-year,
+                .cv-text {
+                    border-right: 1px dotted #2e3033;
+                    border-left: 1px dotted #2e3033;
+                    display: block;
+                    text-align: left;
+                    padding: 0 10px;
+                }
+
+                .cv-text {
+                    padding: 5px 10px;
+                    border-bottom: 1px dotted #2e3033;
+                }
+            }
+        }
+    }
+}
+
+#production {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        .production-card {
+            min-width: 250px;
+            border: 3px solid #2e3033;
+            border-radius: 20px;
+        }
+    }
+}
+
+#skill {
+    .skill-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 20px;
+        img {
+            width: 200px;
+            margin: 20px 0;
+        }
+
+        .skill-card {
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #2e3033;
+            width: 270px;
+            height: 380 px;
+            padding: 5px;
+
+            .skill-body {
+                .skill-title {
+                    display: inline-block;
+                    border-bottom: 1px solid #2e3033;
+                    margin-bottom: 25px;
+                }
+                .skill-parts {
+                    padding-left: 20px;
+                    .skill-list {
+                        list-style: circle;
+                        text-align: left;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .css-design-box {
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+
+            .card-img-top.tailwind {
+                width: 150px;
+                margin-bottom: 50px;
+            }
+
+            .card-img-top.bootstrap {
+                width: 100px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+#footer {
+    text-align: center;
+}

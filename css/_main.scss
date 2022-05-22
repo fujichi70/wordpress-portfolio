@@ -1,0 +1,102 @@
+#main {
+	.main-box {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: sticky;
+		top: 0;
+
+        .main-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .hokuhoku-parts {
+				width: 100%;
+				height: 300px;
+                background: url(/wp-content/uploads/2022/05/hokuhoku.png) center/cover fixed no-repeat;
+                animation: steam-move 20s infinite linear;
+            }
+
+            .logo-parts {
+				width: 100%;
+				height: 500px;
+                background: url(/wp-content/uploads/2022/05/kome_w.png) center/cover fixed no-repeat;
+            }
+
+            @keyframes steam-move {
+                0% {
+                    -webkit-transform: translateY(0px);
+                    transform: translateY(0px);
+                    opacity: 0;
+                }
+                50% {
+                    -webkit-transform: translateY(-20px);
+                    transform: translateY(-20px);
+                    opacity: 0.5;
+                }
+                100% {
+                    -webkit-transform: translateY(-40px);
+                    transform: translateY(-40px);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .scrolldown {
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        height: 50px;
+
+        span {
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            color: rgb(72, 72, 72);
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 30px;
+            background-color: rgb(72, 72, 72);
+
+            opacity: 0;
+            animation: path-move 1.4s ease-in-out infinite;
+        }
+
+        @keyframes path-move {
+            0% {
+                height: 0;
+                top: 0;
+                opacity: 0;
+            }
+            30% {
+                height: 30px;
+                opacity: 1;
+            }
+            100% {
+                height: 0;
+                top: 50px;
+                opacity: 0;
+            }
+        }
+    }
+
+    .container {
+        height: 600px;
+        z-index: 1;
+        background: #eee;
+        padding: 600px 0;
+        text-align: center;
+    }
+}
