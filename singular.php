@@ -2,12 +2,18 @@
 get_header();
 ?>
 
-<div class="content wrapper">
-
-	<h1 class="page-title"><?php the_title(); ?></h1>
+<main id="main">
+<section id="contact">
+	<div class="title">
+		<div class="main-title--box">
+			<h1 class="main-title">Contact</h1>
+			<span class="main-title--sub"><?php the_title(); ?></span>
+		</div>
+	</div>
 
 	<?php the_content(); ?>
 
-</div>
+</section>
+</main>
 
 <?php get_footer(); ?>

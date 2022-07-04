@@ -30,16 +30,6 @@
 
 	<header id="header" class="site-header">
 
-		<?php if (!is_home()) : ?>
-			<div class="site-title-box">
-				<?php echo $title_tag_start; ?>
-				<a href="<?php echo home_url(); ?>">
-					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/kome_c.png">
-				</a>
-				<?php echo $title_tag_end; ?>
-			</div>
-		<?php endif; ?>
-
 		<!--スマホメニュー-->
 		<div class="sp-menu">
 			<div class="hamburger">
@@ -58,7 +48,7 @@
 							<a class="mobile-menu--item" href="<?php echo esc_url(home_url() . '/profile'); ?>">Profile</a>
 						</li>
 						<li class="mobile-menu--list">
-							<a class="mobile-menu--item" href="<?php echo esc_url(home_url() . '/contact'); ?>">お問い合わせ</a>
+							<a class="mobile-menu--item" href="<?php echo esc_url(home_url() . '/#contact'); ?>">お問い合わせ</a>
 						</li>
 					</ul>
 				</nav>
@@ -76,10 +66,15 @@
 						<a class="pc-menu--item" href="<?php echo esc_url(home_url() . '/profile'); ?>"><i class="fas fa-laptop"></i>Profile</a>
 					</li>
 					<li class="pc-menu--list">
-						<a class="pc-menu--item" href="<?php echo esc_url(home_url() . '/contact'); ?>"><i class="far fa-envelope"></i>お問い合わせ</a>
+						<a class="pc-menu--item" href="<?php echo esc_url(home_url() . '/#contact'); ?>"><i class="far fa-envelope"></i>お問い合わせ</a>
 					</li>
 				</ul>
 			</nav>
 		</div><!-- .pc-menu -->
+
+		<div class="return-top">
+			<span>Return<br>Top</span>
+		</div>
+
 
 	</header><!-- #header -->

@@ -5,7 +5,7 @@
 }
 
 body {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 *,
@@ -48,6 +48,107 @@ a {
     display: flex;
 }
 
+.grid {
+    display: grid;
+}
+
 .logo {
     height: 100px;
+}
+
+// レイアウト
+section {
+    margin: 50px 50px 100px;
+}
+
+// 共通タイトル（メイン）
+.title {
+    margin-bottom: 55px;
+}
+
+.main-title--box {
+    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .main-title {
+        font-size: 45px;
+    }
+    .main-title--sub {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}
+
+// 共通タイトル（サブ）
+.sub-title {
+    font-size: 23px;
+    color: burlywood;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.text {
+    margin-left: 10px;
+    letter-spacing: 6px;
+    line-height: 24px;
+    font-size: 17px;
+}
+
+.return-top {
+    visibility: hidden;
+    cursor: pointer;
+    line-height: 15px;
+    background: burlywood;
+    opacity: .7;
+    color: #fff;
+    padding: 15px 10px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    text-align: center;
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    z-index: 999;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        margin: 50px 25px 100px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+    .main-title--box {
+        .main-title {
+            font-size: 35px;
+        }
+        .main-title--sub {
+            font-size: 15px;
+        }
+    }
+    .sub-title {
+        font-size: 18px;
+    }
+
+    .text {
+        margin-left: 10px;
+        letter-spacing: 4px;
+        line-height: 20px;
+        font-size: 15px;
+    }
 }

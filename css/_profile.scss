@@ -1,95 +1,158 @@
-@import "../css/common";
-@import "../css/header";
-@import "../css/footer";
+#profile {
+    margin: 50px 0 100px;
 
-// レイアウト
-section {
-    margin: 50px 50px 100px;
-}
-
-// 共通タイトル（メイン）
-.main-title--box {
-    letter-spacing: 5px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    .main-title {
-        font-size: 45px;
+    .main-title--box {
+        margin: 0 50px;
     }
-    .main-title--sub {
-        font-size: 18px;
-        margin-left: 10px;
-    }
-}
 
-// 共通タイトル（サブ）
-.sub-title {
-    font-size: 23px;
-    color: burlywood;
-    letter-spacing: 3px;
-    margin-bottom: 25px;
-}
-
-.text {
-    letter-spacing: 6px;
-    line-height: 24px;
-}
-
-#main {
-    letter-spacing: 2px;
-    a {
-        justify-content: space-around;
+    .about-text {
+        font-size: 16px;
+        line-height: 35px;
+        margin: 0 10px 10px;
+        letter-spacing: 5px;
     }
 
     .main-profile {
-        justify-content: space-around;
+        display: flex;
+        justify-content: center;
+
+        .main-profile--box {
+            padding: 50px 10px;
+            text-align: center;
+            width: 30%;
+            min-width: 30%;
+            background-color: bisque;
+        }
 
         .main-profile--img {
-            width: 40%;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
 
         .main-profile--name {
             font-size: 30px;
+            color: burlywood;
+            margin-bottom: 10px;
+        }
+
+        .main-profile--list {
+            margin-bottom: 5px;
+            color: rgb(113, 53, 0);
         }
 
         .cv {
+            color: rgb(83, 38, 0);
+            padding: 50px 10px;
+            width: 70%;
+            background-color: rgb(252, 235, 211);
+
+            .cv-title {
+                display: inline-block;
+                font-size: 20px;
+                padding: 0 20px;
+                margin-bottom: 30px;
+                color: burlywood;
+                border-bottom: 5px dotted burlywood;
+            }
+
             .cv-table {
+                margin-right: 15px;
                 font-size: 16px;
                 border-collapse: collapse;
-                border-top: 1px dotted #2e3033;
 
-                .cv-year,
-                .cv-text {
-                    border-right: 1px dotted #2e3033;
-                    border-left: 1px dotted #2e3033;
-                    display: block;
-                    text-align: left;
-                    padding: 0 10px;
+                tr {
+                    display: flex;
+                    margin-bottom: 2px;
+
+                    &:first-of-type {
+                        .cv-text {
+                            border-top: 2px dotted burlywood;
+                        }
+                    }
+                }
+
+                .cv-year {
+                    display: flex;
+  justify-content: center;
+  align-items: center;
+                    background-color: burlywood;
+                    padding: 13px 0;
+                    width: 25%;
                 }
 
                 .cv-text {
-                    padding: 5px 10px;
-                    border-bottom: 1px dotted #2e3033;
+                    display: inline-block;
+                    border-bottom: 2px dotted burlywood;
+                    width: 75%;
+                    padding: 3px 10px 3px;
+                    display: block;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .main-title--box {
+            margin: 0 25px;
+        }
+
+        .main-profile {
+            flex-direction: column;
+
+            .main-profile--box {
+                padding: 50px 50px 0;
+                width: 100%;
+                min-width: 100%;
+            }
+
+            .main-profile--name {
+                font-size: 30px;
+                color: burlywood;
+                margin-bottom: 10px;
+            }
+
+            .main-profile--list {
+                margin-bottom: 5px;
+                color: rgb(113, 53, 0);
+            }
+
+            .cv {
+                color: rgb(59, 27, 0);
+                padding: 50px 10px;
+                width: 100%;
+                background-color: bisque;
+                .cv-table {
+                    font-size: 16px;
+                    border-collapse: collapse;
+
+                    tr {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .cv-year {
+                        padding: 15px 0;
+                        background-color: burlywood;
+                        width: 25%;
+                        margin-bottom: 1px;
+                    }
+
+                    .cv-text {
+                        margin-bottom: 1px;
+                        width: 75%;
+                        display: block;
+                        text-align: left;
+                        padding: 5px 15px;
+                    }
                 }
             }
         }
     }
 }
 
-#production {
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        .production-card {
-            min-width: 250px;
-            border: 3px solid #2e3033;
-            border-radius: 20px;
-        }
-    }
-}
-
 #skill {
+    letter-spacing: 1px;
     .skill-box {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -100,6 +163,7 @@ section {
         }
 
         .skill-card {
+            background-color: #fff;
             margin: 0 auto;
             text-align: center;
             border: 1px solid #2e3033;
@@ -119,7 +183,7 @@ section {
                         list-style: circle;
                         text-align: left;
                         font-size: 16px;
-                        margin-bottom: 10px;
+                        margin-bottom: 6px;
                     }
                 }
 
@@ -140,8 +204,4 @@ section {
             }
         }
     }
-}
-
-#footer {
-    text-align: center;
 }

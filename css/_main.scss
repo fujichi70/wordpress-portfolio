@@ -1,102 +1,561 @@
 #main {
-	.main-box {
-		width: 100%;
-		height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: sticky;
-		top: 0;
+    background: url("http://localhost:10029/wp-content/themes/fujichi/img/kome_back_clear.png") top / cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
 
-        .main-logo {
+    #top {
+        .main-box {
+            width: 100%;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
+            top: 0;
 
-            .hokuhoku-parts {
-				width: 100%;
-				height: 300px;
-                background: url(/wp-content/uploads/2022/05/hokuhoku.png) center/cover fixed no-repeat;
-                animation: steam-move 20s infinite linear;
+            .main-text {
+                padding: 0 20px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                line-height: 40px;
+
+                .main-text--items {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .scrolldown {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            height: 50px;
+
+            span {
+                position: absolute;
+                left: -15px;
+                top: -15px;
+                color: rgb(72, 72, 72);
+                font-size: 0.7rem;
+                letter-spacing: 0.05em;
             }
 
-            .logo-parts {
-				width: 100%;
-				height: 500px;
-                background: url(/wp-content/uploads/2022/05/kome_w.png) center/cover fixed no-repeat;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 1px;
+                height: 30px;
+                background-color: rgb(72, 72, 72);
+
+                opacity: 0;
+                animation: path-move 1.4s ease-in-out infinite;
             }
 
-            @keyframes steam-move {
+            @keyframes path-move {
                 0% {
-                    -webkit-transform: translateY(0px);
-                    transform: translateY(0px);
+                    height: 0;
+                    top: 0;
                     opacity: 0;
                 }
-                50% {
-                    -webkit-transform: translateY(-20px);
-                    transform: translateY(-20px);
-                    opacity: 0.5;
+                30% {
+                    height: 30px;
+                    opacity: 1;
                 }
                 100% {
-                    -webkit-transform: translateY(-40px);
-                    transform: translateY(-40px);
+                    height: 0;
+                    top: 50px;
                     opacity: 0;
                 }
             }
         }
-    }
 
-    .scrolldown {
-        position: absolute;
-        left: 50%;
-        bottom: 10px;
-        height: 50px;
+        @media screen and (max-width: 600px) {
+            .main-box {
+                .main-text {
+                    padding: 0 22px;
+                    position: absolute;
+                    top: 50%;
+                    line-height: 30px;
 
-        span {
-            position: absolute;
-            left: -15px;
-            top: -15px;
-            color: rgb(72, 72, 72);
-            font-size: 0.7rem;
-            letter-spacing: 0.05em;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 1px;
-            height: 30px;
-            background-color: rgb(72, 72, 72);
-
-            opacity: 0;
-            animation: path-move 1.4s ease-in-out infinite;
-        }
-
-        @keyframes path-move {
-            0% {
-                height: 0;
-                top: 0;
-                opacity: 0;
-            }
-            30% {
-                height: 30px;
-                opacity: 1;
-            }
-            100% {
-                height: 0;
-                top: 50px;
-                opacity: 0;
+                    .main-text--items {
+                        margin-bottom: 20px;
+                    }
+                }
             }
         }
     }
 
     .container {
-        height: 600px;
         z-index: 1;
         background: #eee;
-        padding: 600px 0;
-        text-align: center;
+        padding: 90px 0 140px;
     }
-}
+
+    // 簡易自己紹介
+    #aboutme {
+        .wrapper {
+            margin: 0 auto;
+            max-width: 810px;
+        }
+
+        .about-text--box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .about-img {
+                width: 280px;
+                height: 280px;
+                border-radius: 50%;
+                margin: 0 10px;
+            }
+
+            .about-text {
+                font-size: 16px;
+                line-height: 35px;
+                margin: 0 10px 10px;
+                letter-spacing: 5px;
+            }
+
+            .about-allow {
+                position: relative;
+                color: #333;
+                padding: 10px 0;
+                display: inline-block;
+                text-decoration: none;
+                outline: none;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #333;
+                    animation: arrowAnime1 5s ease infinite;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -4px;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 1px solid #333;
+                    border-right: 1px solid #333;
+                    transform: rotate(45deg);
+                    animation: arrowAnime2 5s ease infinite;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            @keyframes arrowAnime1 {
+                0% {
+                    width: 0;
+                    opacity: 0;
+                }
+                20% {
+                    width: 0;
+                    opacity: 1;
+                }
+                80% {
+                    width: 105%;
+                    opacity: 1;
+                }
+                100% {
+                    width: 105%;
+                    opacity: 0;
+                }
+            }
+
+            @keyframes arrowAnime2 {
+                0% {
+                    left: 0;
+                    opacity: 0;
+                }
+                20% {
+                    left: 0;
+                    opacity: 1;
+                }
+                80% {
+                    left: 103%;
+                    opacity: 1;
+                }
+                100% {
+                    left: 103%;
+                    opacity: 0;
+                }
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            .about-text--box {
+                flex-direction: column;
+
+                .about-img {
+                    margin-bottom: 30px;
+                }
+
+                .about-text {
+                    line-height: 30px;
+                    letter-spacing: 3px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .about-text--box {
+                .about-text {
+                    line-height: 25px;
+                    font-size: 15px;
+                }
+            }
+        }
+    } /* #aboutme */
+
+    // 作品紹介
+    #products {
+        .wrapper {
+            margin: 0;
+            padding: 30px 0;
+        }
+    }
+
+    // 制作過程
+    #production {
+        z-index: 10;
+
+        .process-group {
+            margin: 0 auto;
+            max-width: 850px;
+
+            // processタイトル
+            .process-title {
+                text-align: center;
+                margin-bottom: 50px;
+
+                .process-title--group {
+                    display: inline-block;
+                    overflow: hidden;
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: rgb(145, 144, 144);
+                        width: 0;
+                        height: 3px;
+                    }
+
+                    &::before {
+                        right: 0;
+                        bottom: 0;
+                    }
+
+                    &::after {
+                        left: 0;
+                        top: 0;
+                    }
+
+                    .process-title--parts {
+                        font-size: 22px;
+                        padding: 10px 20px;
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background: rgb(145, 144, 144);
+                            width: 3px;
+                            height: 0;
+                        }
+
+                        &::before {
+                            left: 0;
+                            bottom: 0;
+                        }
+
+                        &::after {
+                            right: 0;
+                            top: 0;
+                        }
+                    }
+
+                    .process-title--items {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0;
+                        transform: translateY(30%);
+                        transition: opacity 0.1s, transform 0.5s;
+                        transition-delay: 0.8s;
+
+                        span {
+                            margin-left: 10px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            // processアニメーション
+            .process-title.appear {
+                .process-title--group {
+                    &::before,
+                    &::after {
+                        animation: borderSpreadW 0.5s forwards ease-in-out;
+                    }
+
+                    .process-title--parts {
+                        &::before,
+                        &::after {
+                            animation: borderSpreadH 0.3s forwards ease-in-out;
+                        }
+
+                        &::before {
+                            animation-delay: 0.5s; /*左の線*/
+                        }
+
+                        &::after {
+                            animation-delay: 0.5s; /*右の線*/
+                        }
+
+                        .process-title--items {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+
+            @keyframes borderSpreadW {
+                0% {
+                    width: 0%;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+
+            @keyframes borderSpreadH {
+                0% {
+                    height: 0%;
+                }
+                100% {
+                    height: 100%;
+                }
+            }
+
+            .process-text {
+                letter-spacing: 4px;
+                padding-bottom: 100px;
+                text-align: center;
+            }
+
+            // 各ボックス
+            .process-box {
+                background-color: rgb(255, 254, 253);
+                line-height: 25px;
+                display: inline-block;
+                padding: 20px 30px;
+                opacity: 0;
+                transform: translateY(30%);
+                border: solid 2px rgb(177, 177, 177);
+                border-radius: 20px;
+                margin-bottom: 70px;
+                position: relative;
+
+                .process-box--list {
+                    margin-bottom: 5px;
+                }
+
+                .process-box--title {
+                    text-shadow: 1px 1px 0px #333, -1px -1px 0px #333, -1px 1px 0px #333, 1px -1px 0px #333, 1px 0px 0px #333, -1px 0px 0px #333, 0px 1px 0px #333, 0px -1px 0px #333;
+                    margin: 0;
+                    font-size: 15px;
+                    overflow: hidden;
+                    display: inline-block;
+                    position: absolute;
+                    top: -50px;
+                    left: 15px;
+                    color: #fff;
+                    padding: 10px 20px;
+                    cursor: pointer;
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        width: 0%;
+                        left: 0;
+                        height: 1px;
+                        bottom: 7px;
+                        background-color: #333;
+                    }
+                    &::after {
+                        content: "\f303";
+                        position: absolute;
+                        font-family: FontAwesome;
+                        bottom: 4.5px;
+                        left: 50%;
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .hearing-img {
+                display: flex;
+                flex-direction: column;
+                .process-img--parts {
+                    margin-left: 10px;
+                    .process-img:first-of-type {
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            // フェードイン
+            .process-box.appear {
+                animation: fadeIn 2s forwards;
+
+                .process-box--title {
+                    &::before {
+                        animation: underBorder 1s 1.1s ease-in forwards;
+                    }
+
+                    &::after {
+                        animation: pencil 1s 1.09s ease-in;
+                    }
+                }
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30%);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
+
+            @keyframes underBorder {
+                0% {
+                    width: 0%;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+
+            @keyframes pencil {
+                0% {
+                    left: 0%;
+                    opacity: 0;
+                }
+                1% {
+                    left: 0%;
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 1;
+                    left: 100%;
+                }
+            }
+
+            .process-box--text {
+                margin-left: auto;
+                padding-top: 20px;
+                font-size: 15px;
+
+                ul {
+                    margin-left: 20px;
+                }
+                li {
+                    margin: 7px 0px;
+                    list-style: disc;
+                }
+            }
+
+            .process-box--parts {
+                .process-box--list {
+                    margin-left: 25px;
+                    list-style: circle;
+                }
+            }
+
+            .process-img--items {
+                display: flex;
+                align-items: center;
+                .process-img--parts {
+                    .process-img {
+                        margin: 0 20px;
+                    }
+                    .data-img {
+                        width: 120px;
+                    }
+                }
+
+                .flex {
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            // 最後のボックス
+            .process-guide--box.flex {
+                align-items: center;
+            }
+            .process-guide--box {
+                margin: 10px auto;
+                max-width: 650px;
+                height: auto;
+                opacity: 0;
+                transform: translateY(30%);
+
+                .process-guide--img {
+                    margin: 0 10px;
+                    .guide-img {
+                        max-width: 150px;
+                    }
+                }
+                .process-guide--text {
+                    line-height: 35px;
+                    margin: 0 10px;
+                }
+            }
+
+            // フェードイン
+            .process-guide--box.appear {
+                animation: fadeIn 2s forwards;
+            }
+        } /* .process-group */
+
+        @media screen and (max-width: 750px) {
+            .process-group {
+                .process-box {
+                    padding: 10px;
+                }
+                .process-img--items {
+                    margin-top: 20px;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+            }
+        }
+    } /* #production */
+
+    #contact {
+        margin: 50px 50px 100px;
+        p {
+            margin-bottom: 40px;
+        }
+    }
+} /* #main */
