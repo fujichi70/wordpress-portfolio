@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: F-fitness
+Template Name: F-Cafe
 */
 ?>
 

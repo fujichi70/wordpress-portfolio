@@ -85,7 +85,7 @@
                         </div>
                         <div class="products-sub--box">
                             <a class="products-sub--btn" href="#">サイトへ</a>
-                            <a class="products-sub--btn" href="<?php echo esc_url(home_url() . '/f_main'); ?>">詳細へ</a>
+                            <a class="products-sub--btn" href="<?php echo esc_url(home_url() . '/f_top'); ?>">詳細へ</a>
                         </div>
                     </div>
                     <div class=" products-box target">

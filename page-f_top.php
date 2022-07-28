@@ -1,12 +1,12 @@
 <?php
 /*
-Template Name: F-Board
+Template Name: F-Top
 */
 ?>
 
 <?php get_header(); ?>
 
-<section id="board" class="productspage">
+<section id="top" class="productspage">
 
     <div class="container">
         <div class="productspage-main--box">
@@ -38,12 +38,12 @@ Template Name: F-Board
         </div><!-- .productspage-main--box -->
 
         <div class="productspage-imgs">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/products/board/f-board_np.png" class="productspage-pc" alt="pc画像">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/products/board/f-board_sp.png" class="productspage-sp" alt="sp画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/products/top/f-top_np.png" class="productspage-pc" alt="pc画像">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/products/top/f-top_sp.png" class="productspage-sp" alt="sp画像">
         </div>
     </div>
 
-    <div class="container board-container">
+    <div class="container top-container">
         <div class="productspage-point">
             <div class="productspage-point--titles">
                 <i class="fa-solid fa-pencil"></i>
@@ -51,14 +51,14 @@ Template Name: F-Board
                 <i class="fa-solid fa-pencil"></i>
             </div>
             <div class="productspage-point--parts flex">
-                <li class="productspage-point--list"><img class="img" src="<?php echo get_template_directory_uri(); ?>/img/products/board/f-board_category.png" alt="サイトカテゴリー紹介画像"></li>
+                <li class="productspage-point--list"><img class="img" src="<?php echo get_template_directory_uri(); ?>/img/products/top/f-top_category.png" alt="サイトカテゴリー紹介画像"></li>
                 <div class="productspage-point--texts">
                     <h4 class="productspage-point--texttitle">カテゴリー</h4>
                     <p class="productspage-point--text">女性が悩みそうな項目で分けてみました。ログインしなくても閲覧は可能。</p>
                 </div>
             </div>
             <div class="productspage-point--parts flex">
-                <li class="productspage-point--list"><img class="img" src="<?php echo get_template_directory_uri(); ?>/img/products/board/f-board_registration.png" alt="会員登録紹介画像"></li>
+                <li class="productspage-point--list"><img class="img" src="<?php echo get_template_directory_uri(); ?>/img/products/top/f-top_registration.png" alt="会員登録紹介画像"></li>
                 <div class="productspage-point--texts">
                     <h4 class="productspage-point--texttitle">会員登録画面</h4>
                     <p class="productspage-point--text">会員登録すると投稿が可能になります。情報を入力するとメールが届き、メールに記載されているURLにアクセスすると登録完了です。</p>
@@ -67,7 +67,7 @@ Template Name: F-Board
             <div class="productspage-point--parts flex">
                 <li class="productspage-point--list videos">
                     <video class="videos" poster="" loop autoplay muted playsinline>
-                        <source src="<?php echo get_template_directory_uri(); ?>/img/products/board/f-board_loginout.mp4" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri(); ?>/img/products/top/f-top_loginout.mp4" type="video/mp4">
                         <p>申し訳ございません。動画が再生できませんでした。</p>
                     </video>
                 </li>
@@ -79,7 +79,7 @@ Template Name: F-Board
             <div class="productspage-point--parts flex">
                 <li class="productspage-point--list videos">
                     <video class="videos" poster="" loop autoplay muted playsinline>
-                        <source src="<?php echo get_template_directory_uri(); ?>/img/products/board/f-board_post.mp4" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri(); ?>/img/products/top/f-top_post.mp4" type="video/mp4">
                         <p>申し訳ございません。動画が再生できませんでした。</p>
                     </video>
                 </li>
