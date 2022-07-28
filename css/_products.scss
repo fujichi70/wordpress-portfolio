@@ -546,11 +546,11 @@
     .productspage-btn--box {
         .productspage-btn {
             background-color: #fff;
-            color: #eee;
+            color: rgba(112, 112, 112, 1);
 
             &:hover {
                 color: #fff;
-                background-color: #eee;
+                background-color: rgba(112, 112, 112, 1);
                 border: 2px solid #fff;
             }
         }
@@ -569,10 +569,10 @@
     .productspage-sub--text {
         text-shadow: 1px 1px 0 #fff;
     }
-
+    
     .productspage-table {
         th {
-            text-shadow: none;
+            text-shadow: 1px 1px 0 #fff;
             color: rgba(112, 112, 112, 1);
         }
 
@@ -594,8 +594,8 @@
 
     // こだわった部分
     .cafe-container {
-        background-color: rgb(49, 5, 5);
-        color: antiquewhite;
+        color: rgb(49, 5, 5);
+        background-color: #fff;
         padding: 30px 0;
     }
 }

@@ -321,7 +321,7 @@ section {
 }
 
 #main {
-  background: url("http://localhost:10029/wp-content/themes/fujichi/img/kome_back_clear.png") top/cover no-repeat fixed;
+  background: url("https://fujichi.com/wp-content/themes/fujichi/img/kome_back_clear.png") top/cover no-repeat fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,7 +334,7 @@ section {
   /* #production */
 }
 
-#main #top .main-box {
+#main #main-visual .main-box {
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -349,7 +349,7 @@ section {
   top: 0;
 }
 
-#main #top .main-box .main-text {
+#main #main-visual .main-box .main-text {
   padding: 0 20px;
   position: absolute;
   top: 50%;
@@ -359,18 +359,18 @@ section {
   font-size: 18px;
 }
 
-#main #top .main-box .main-text .main-text--items {
+#main #main-visual .main-box .main-text .main-text--items {
   margin-bottom: 20px;
 }
 
-#main #top .scrolldown {
+#main #main-visual .scrolldown {
   position: absolute;
   left: 50%;
   bottom: 10px;
   height: 50px;
 }
 
-#main #top .scrolldown span {
+#main #main-visual .scrolldown span {
   position: absolute;
   left: -15px;
   top: -15px;
@@ -379,7 +379,7 @@ section {
   letter-spacing: 0.05em;
 }
 
-#main #top .scrolldown::after {
+#main #main-visual .scrolldown::after {
   content: "";
   position: absolute;
   top: 0;
@@ -426,13 +426,13 @@ section {
 }
 
 @media screen and (max-width: 620px) {
-  #main #top .main-box .main-text {
+  #main #main-visual .main-box .main-text {
     padding: 0 22px;
     position: absolute;
     top: 50%;
     line-height: 30px;
   }
-  #main #top .main-box .main-text .main-text--items {
+  #main #main-visual .main-box .main-text .main-text--items {
     margin-bottom: 20px;
   }
 }
@@ -1906,12 +1906,12 @@ section {
 
 #top .productspage-btn--box .productspage-btn {
   background-color: #fff;
-  color: #eee;
+  color: #707070;
 }
 
 #top .productspage-btn--box .productspage-btn:hover {
   color: #fff;
-  background-color: #eee;
+  background-color: #707070;
   border: 2px solid #fff;
 }
 
@@ -1930,7 +1930,7 @@ section {
 }
 
 #top .productspage-table th {
-  text-shadow: none;
+  text-shadow: 1px 1px 0 #fff;
   color: #707070;
 }
 
@@ -1948,8 +1948,8 @@ section {
 }
 
 #top .cafe-container {
-  background-color: #310505;
-  color: antiquewhite;
+  color: #310505;
+  background-color: #fff;
   padding: 30px 0;
 }
 
