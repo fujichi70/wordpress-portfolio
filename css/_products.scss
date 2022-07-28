@@ -1,0 +1,539 @@
+// productspage共通
+.productspage {
+    overflow: hidden;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    margin: 0;
+
+    .container {
+        padding-bottom: 60px;
+    }
+}
+
+.productspage-main--box {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    padding-bottom: 150px;
+    overflow-x: hidden;
+    z-index: 10;
+    .productspage-main--item {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        transform: translateY(-50%);
+        z-index: 3;
+    }
+}
+
+// タイトル部分
+.productspage-main--title {
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    text-shadow: 2px 2px 0px rgba(255, 0, 0, 0.4), 4px 4px 0px rgba(255, 82, 82, 1);
+}
+
+.productspage-sub--title {
+    line-height: 50px;
+    font-size: 28px;
+    text-shadow: 2px 2px 0 rgb(252, 2, 2);
+    color: rgb(252, 167, 167);
+    margin-bottom: 20px;
+}
+
+.productspage-sub--text {
+    text-shadow: 1px 1px 0 rgb(134, 134, 134);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+// サイトボタン
+.productspage-btn--box {
+    .productspage-btn {
+        color: #fff;
+        background-color: rgb(212, 55, 55);
+        border-radius: 30px;
+        padding: 10px 20px;
+        line-height: 70px;
+
+        &:hover {
+            color: rgb(212, 55, 55);
+            background-color: #fff;
+            border: 2px solid rgb(212, 55, 55);
+            transition: all 0.5s;
+        }
+    }
+}
+
+.productspage-table {
+    text-align: left;
+    position: absolute;
+    left: 7%;
+    bottom: 25%;
+    z-index: 3;
+
+    th {
+        width: 110px;
+        text-shadow: 2px 2px 0 rgb(252, 2, 2);
+        color: rgb(252, 167, 167);
+    }
+}
+
+// 背景pc,sp
+.productspage-imgs {
+    overflow: hidden;
+    .productspage-pc {
+        z-index: 0;
+        position: absolute;
+        top: -5%;
+        right: -15%;
+        width: 1000px;
+        transform: rotate(-20deg);
+    }
+    .productspage-sp {
+        width: 200px;
+        position: absolute;
+        z-index: 2;
+        bottom: -5%;
+        right: 5%;
+        transform: rotate(20deg);
+    }
+}
+
+// こだわった部分
+.productspage-point {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.productspage-point--items {
+    margin-bottom: 30px;
+}
+
+.productspage-point--titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px rgba(255, 0, 0, 0.4), 4px 4px 0px rgba(255, 82, 82, 1);
+    padding: 0 30px;
+    margin: 40px 0;
+
+    .productspage-point--title {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0 20px;
+    }
+
+    .fas {
+        font-size: 25px;
+        transform: rotate(-45deg);
+        margin: 0 5px;
+    }
+}
+
+.productspage-point--parts {
+    .productspage-point--list {
+        position: relative;
+        width: 400px;
+        height: 240px;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        .videos {
+            width: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .productspage-point--texts {
+        max-width: 50%;
+        margin-left: 10px;
+
+        .productspage-point--texttitle {
+            border-bottom: 3px dotted rgb(212, 55, 55);
+            margin: 10px 0;
+            padding-bottom: 5px;
+            font-size: 18px;
+        }
+    }
+}
+
+// 作ってみて
+.productspage-end {
+    max-width: 600px;
+    margin: 0 auto;
+
+    ul {
+        li {
+            list-style: circle;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .productspage-point {
+        margin-bottom: 90px;
+        .productspage-point--parts {
+            margin: 0 30px 50px;
+            .productspage-point--list {
+                width: 100%;
+                height: 350px;
+                overflow: hidden;
+                margin-bottom: 0;
+
+                .videos {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            .productspage-point--texts {
+                max-width: 100%;
+                margin-left: 10px;
+            }
+        }
+    }
+    .productspage-end {
+        margin: 0 30px 0 40px;
+    }
+}
+
+// 各ページ
+#fitness {
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.493);
+}
+
+#cafe {
+    color: rgb(49, 5, 5);
+    background-color: antiquewhite;
+    font-family: "Permanent Marker", "Kiwi Maru", serif;
+
+    .productspage-btn--box {
+        .productspage-btn {
+            color: #fff;
+            background-color: rgb(134, 109, 77);
+
+            &:hover {
+                color: rgb(134, 109, 77);
+                background-color: #fff;
+                border: 2px solid rgb(134, 109, 77);
+            }
+        }
+    }
+
+    // タイトル部分
+    .productspage-main--title {
+        text-shadow: 2px 2px 0px rgb(207, 175, 132), 4px 4px 0px rgb(63, 45, 21);
+    }
+
+    .productspage-sub--title {
+        text-shadow: 2px 2px 0 rgb(233, 181, 114);
+        color: rgb(167, 150, 129);
+    }
+
+    .productspage-sub--text {
+        text-shadow: none;
+    }
+
+    .productspage-table {
+        th {
+            text-shadow: 2px 2px 0 rgb(233, 181, 114);
+            color: rgb(134, 109, 77);
+        }
+
+        tr {
+            text-shadow: 1px 1px 0 rgb(233, 181, 114);
+        }
+    }
+
+    .productspage-point--titles {
+        color: rgb(233, 181, 114);
+        text-shadow: none;
+    }
+
+    .productspage-point--texts {
+        .productspage-point--texttitle {
+            border-bottom: 3px dotted rgb(233, 181, 114);
+        }
+    }
+
+    // こだわった部分
+    .cafe-container {
+        background-color: rgb(49, 5, 5);
+        color: antiquewhite;
+        padding: 30px 0;
+    }
+}
+
+#board {
+    color: rgba(112, 112, 112, 1);
+    font-family: Atlanta, sans-serif;
+    background-color: rgba(252, 245, 236, 1);
+
+    .productspage-btn--box {
+        .productspage-btn {
+            color: #fff;
+            background-color: rgb(238, 167, 0);
+
+            &:hover {
+                color: rgb(238, 167, 0);
+                background-color: #fff;
+                border: 2px solid rgb(238, 167, 0);
+            }
+        }
+    }
+
+    // タイトル部分
+    .productspage-main--title {
+        color: rgb(238, 167, 0);
+        text-shadow: 2px 2px 0px rgb(238, 167, 0), 4px 4px 0px rgb(252, 238, 193);
+    }
+
+    .productspage-sub--title {
+        text-shadow: 1px 1px 0 #fff;
+        color: rgb(238, 167, 0);
+    }
+    .productspage-sub--text {
+        text-shadow: 1px 1px 0 #fff;
+    }
+
+    .productspage-table {
+        th {
+            text-shadow: none;
+            color: rgb(238, 167, 0);
+        }
+
+        tr {
+            text-shadow: none;
+        }
+    }
+
+    .productspage-point--titles {
+        color: rgb(233, 181, 114);
+        text-shadow: none;
+    }
+
+    .productspage-point--texts {
+        .productspage-point--texttitle {
+            border-bottom: 3px dotted rgb(233, 181, 114);
+        }
+    }
+
+    // こだわった部分
+    .cafe-container {
+        background-color: rgb(49, 5, 5);
+        color: antiquewhite;
+        padding: 30px 0;
+    }
+}
+
+#hotel {
+    color: rgb(250, 235, 215);
+    background-color: rgb(0, 51, 35);
+
+    .productspage-btn--box {
+        .productspage-btn {
+            background-color: rgb(250, 235, 215);
+            color: rgb(0, 51, 35);
+
+            &:hover {
+                color: rgb(250, 235, 215);
+                background-color: rgb(0, 51, 35);
+                border: 2px solid rgb(250, 235, 215);
+            }
+        }
+    }
+
+    // タイトル部分
+    .productspage-main--title {
+        color: rgb(250, 235, 215);
+        text-shadow: 2px 2px 0px rgb(0, 51, 35), 4px 4px 0px burlywood;
+    }
+
+    .productspage-sub--title {
+        text-shadow: 1px 1px 0 rgb(250, 235, 215);
+        color: burlywood;
+    }
+    .productspage-sub--text {
+        text-shadow: 1px 1px 0 rgb(0, 51, 35);
+    }
+
+    .productspage-table {
+        th {
+            text-shadow: none;
+            color: burlywood;
+        }
+
+        tr {
+            text-shadow: none;
+        }
+    }
+
+    .productspage-point--titles {
+        color: burlywood;
+        text-shadow: 1px 1px 0 rgb(250, 235, 215);
+    }
+
+    .productspage-point--texts {
+        .productspage-point--texttitle {
+            border-bottom: 3px dotted burlywood;
+        }
+    }
+}
+
+#board {
+    color: rgba(112, 112, 112, 1);
+    font-family: Atlanta, sans-serif;
+    background-color: rgba(252, 245, 236, 1);
+
+    .productspage-btn--box {
+        .productspage-btn {
+            color: #fff;
+            background-color: rgb(238, 167, 0);
+
+            &:hover {
+                color: rgb(238, 167, 0);
+                background-color: #fff;
+                border: 2px solid rgb(238, 167, 0);
+            }
+        }
+    }
+
+    // タイトル部分
+    .productspage-main--title {
+        color: rgb(238, 167, 0);
+        text-shadow: 2px 2px 0px rgb(238, 167, 0), 4px 4px 0px rgb(252, 238, 193);
+    }
+
+    .productspage-sub--title {
+        text-shadow: 1px 1px 0 #fff;
+        color: rgb(238, 167, 0);
+    }
+    .productspage-sub--text {
+        text-shadow: 1px 1px 0 #fff;
+    }
+
+    .productspage-table {
+        th {
+            text-shadow: none;
+            color: rgb(238, 167, 0);
+        }
+
+        tr {
+            text-shadow: none;
+        }
+    }
+
+    .productspage-point--titles {
+        color: rgb(233, 181, 114);
+        text-shadow: none;
+    }
+
+    .productspage-point--texts {
+        .productspage-point--texttitle {
+            border-bottom: 3px dotted rgb(233, 181, 114);
+        }
+    }
+
+    // こだわった部分
+    .cafe-container {
+        background-color: rgb(49, 5, 5);
+        color: antiquewhite;
+        padding: 30px 0;
+    }
+}
+
+#blog {
+    color: rgb(24, 116, 116);
+    background-color: rgb(208, 236, 252);
+
+    .productspage-btn--box {
+        .productspage-btn {
+            background-color: rgba(33, 151, 151, 1);
+            color: #fff;
+
+            &:hover {
+                border: 2px solid rgba(33, 151, 151, 1);
+                background-color: #fff;
+                color: rgba(33, 151, 151, 1);
+            }
+        }
+    }
+
+    // タイトル部分
+    .productspage-main--title {
+        color: rgba(33, 151, 151, 1);
+        text-shadow: 2px 2px 0px rgb(208, 236, 252), 4px 4px 0 rgba(33, 151, 151, 1);
+    }
+
+    .productspage-sub--title {
+        text-shadow: 1px 1px 0 rgb(2, 54, 54);
+        color: rgba(33, 151, 151, 1);
+    }
+    .productspage-sub--text {
+        text-shadow: 1px 1px 0 #fff;
+    }
+
+    .productspage-table {
+        th {
+            text-shadow: none;
+            color: rgba(33, 151, 151, 1);
+        }
+
+        tr {
+            text-shadow: none;
+        }
+    }
+
+    .productspage-point--titles {
+        text-shadow: 1px 1px 0 rgb(2, 54, 54);
+        color: rgba(33, 151, 151, 1);
+    }
+
+    .productspage-point--texts {
+        .productspage-point--texttitle {
+            border-bottom: 3px dotted rgb(2, 54, 54);
+        }
+    }
+
+    // こだわった部分（スマホ画面なので縦方向に対応）
+    .productspage-point--parts:nth-child(3) {
+        justify-items: center;
+        .productspage-point--list {
+            height: 400px;
+            .videos {
+            width: 250px;
+            height: auto;
+        }
+    }
+    }
+
+    @media screen and (max-width: 750px) {
+    .productspage-point {
+        .productspage-point--parts:nth-child(3) {
+            .productspage-point--list {
+                width: 100%;
+                height: 400px;
+                overflow: hidden;
+                margin-bottom: 0;
+
+                .videos {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+}

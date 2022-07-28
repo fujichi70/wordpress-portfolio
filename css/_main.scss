@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     letter-spacing: 2px;
-
+    
     #top {
         .main-box {
             width: 100%;
@@ -19,6 +19,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 line-height: 40px;
+                font-size: 18px;
 
                 .main-text--items {
                     margin-bottom: 20px;
@@ -71,7 +72,7 @@
             }
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 620px) {
             .main-box {
                 .main-text {
                     padding: 0 22px;
@@ -224,6 +225,227 @@
             margin: 0;
             padding: 30px 0;
         }
+
+        .grid {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            place-items: center;
+            row-gap: 30px;
+        }
+
+        .products-box {
+            font-family: 'M PLUS 1', sans-serif;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            padding: 20px;
+            max-width: 400px;
+            height: 400px;
+            position: relative;
+
+            &:hover {
+                .products-sub--box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+
+            .omusubi {
+                opacity: .7;
+                position: absolute;
+                top: -23px;
+                left: -5px;
+                z-index: 10;
+                width: 60px;
+                transform: rotate(-20deg);
+                animation: omusubiKorokoro .5s forwards;
+            }
+
+            @keyframes omusubiKorokoro {
+                0% {
+                    transform: rotate(-20deg);
+                }
+                1% {
+                    transform: rotate(20deg);
+                }
+                99% {
+                    transform: rotate(20deg);
+                }
+                100% {
+                    transform: rotate(-20deg);
+                }
+            }
+
+            .products-img--parts {
+                text-align: center;
+                margin-bottom: 25px;
+
+                .products-img {
+                    border-radius: 10px;
+                }
+            }
+
+            .products-box--title {
+                color: burlywood;
+                text-align: center;
+                font-size: 20px;
+                margin: 5px 0;
+            }
+
+            .products-box--text {
+                text-align: center;
+                padding: 5px;
+                border: 2px double burlywood;
+                margin-bottom: 10px;
+            }
+
+            .products-box--parts {
+                .products-box--list {
+                    list-style: circle;
+                    margin-left: 25px;
+                }
+            }
+        }
+
+        .products-sub--box {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(222, 184, 135, 0.231);
+            height: 330px;
+            width: 270px;
+
+            .products-sub--btn {
+                text-align: center;
+                color: #fff;
+                background-color: rgb(219, 189, 149);
+                border-radius: 20px;
+                padding: 10px 20px;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    // タイトル
+    .multi-title {
+        text-align: center;
+        margin-bottom: 50px;
+
+        .multi-title--group {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background: rgb(145, 144, 144);
+                width: 0;
+                height: 3px;
+            }
+
+            &::before {
+                right: 0;
+                bottom: 0;
+            }
+
+            &::after {
+                left: 0;
+                top: 0;
+            }
+
+            .multi-title--parts {
+                font-size: 22px;
+                padding: 10px 20px;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: rgb(145, 144, 144);
+                    width: 3px;
+                    height: 0;
+                }
+
+                &::before {
+                    left: 0;
+                    bottom: 0;
+                }
+
+                &::after {
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+            .multi-title--items {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: translateY(30%);
+                transition: opacity 0.1s, transform 0.5s;
+                transition-delay: 0.8s;
+
+                span {
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // タイトルアニメーション
+    .multi-title.appear {
+        .multi-title--group {
+            &::before,
+            &::after {
+                animation: borderSpreadW 0.5s forwards ease-in-out;
+            }
+
+            .multi-title--parts {
+                &::before,
+                &::after {
+                    animation: borderSpreadH 0.3s forwards ease-in-out;
+                }
+
+                &::before {
+                    animation-delay: 0.5s; /*左の線*/
+                }
+
+                &::after {
+                    animation-delay: 0.5s; /*右の線*/
+                }
+
+                .multi-title--items {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    @keyframes borderSpreadW {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    @keyframes borderSpreadH {
+        0% {
+            height: 0%;
+        }
+        100% {
+            height: 100%;
+        }
     }
 
     // 制作過程
@@ -233,124 +455,6 @@
         .process-group {
             margin: 0 auto;
             max-width: 850px;
-
-            // processタイトル
-            .process-title {
-                text-align: center;
-                margin-bottom: 50px;
-
-                .process-title--group {
-                    display: inline-block;
-                    overflow: hidden;
-                    position: relative;
-
-                    &::before,
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        background: rgb(145, 144, 144);
-                        width: 0;
-                        height: 3px;
-                    }
-
-                    &::before {
-                        right: 0;
-                        bottom: 0;
-                    }
-
-                    &::after {
-                        left: 0;
-                        top: 0;
-                    }
-
-                    .process-title--parts {
-                        font-size: 22px;
-                        padding: 10px 20px;
-
-                        &::before,
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            background: rgb(145, 144, 144);
-                            width: 3px;
-                            height: 0;
-                        }
-
-                        &::before {
-                            left: 0;
-                            bottom: 0;
-                        }
-
-                        &::after {
-                            right: 0;
-                            top: 0;
-                        }
-                    }
-
-                    .process-title--items {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        opacity: 0;
-                        transform: translateY(30%);
-                        transition: opacity 0.1s, transform 0.5s;
-                        transition-delay: 0.8s;
-
-                        span {
-                            margin-left: 10px;
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-
-            // processアニメーション
-            .process-title.appear {
-                .process-title--group {
-                    &::before,
-                    &::after {
-                        animation: borderSpreadW 0.5s forwards ease-in-out;
-                    }
-
-                    .process-title--parts {
-                        &::before,
-                        &::after {
-                            animation: borderSpreadH 0.3s forwards ease-in-out;
-                        }
-
-                        &::before {
-                            animation-delay: 0.5s; /*左の線*/
-                        }
-
-                        &::after {
-                            animation-delay: 0.5s; /*右の線*/
-                        }
-
-                        .process-title--items {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-                }
-            }
-
-            @keyframes borderSpreadW {
-                0% {
-                    width: 0%;
-                }
-                100% {
-                    width: 100%;
-                }
-            }
-
-            @keyframes borderSpreadH {
-                0% {
-                    height: 0%;
-                }
-                100% {
-                    height: 100%;
-                }
-            }
 
             .process-text {
                 letter-spacing: 4px;

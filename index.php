@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <div class="logo-parts"></div>
 <main id="main">
@@ -23,8 +21,8 @@ get_header();
             </div>
         </div>
         <div class="scrolldown"><span>Scroll</span></div>
-
     </section>
+
     <div class="container">
         <section id="aboutme">
             <div class="title">
@@ -60,9 +58,120 @@ get_header();
                     どこにあるんだろう？がなくなるサイト作りのサポート<br>いちばん必要な情報を、いちばんに得られることが、いちばん大事だと思うのです
                 </h3>
             </div>
-        </div>
-    </section>
 
+            <div class="products-group">
+                <div class="multi-title target">
+                    <div class="multi-title--group">
+                        <div class="multi-title--parts">
+                            <div class="multi-title--items">
+                                <p>List</p>
+                                <span>- 作品一覧 -</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="products-box target">
+                        <img class="omusubi" src="<?php echo get_stylesheet_directory_uri() . '/img/omusubi.png'; ?>" alt="">
+                        <div class="products-img--parts"><img class="products-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/products/portfolio.png" alt="作品画像"></div>
+                        <div>
+                            <h4 class="products-box--title">ポートフォリオサイト</h4>
+                            <p class="products-box--text">Wordpress / CSS / JavaScript / PHP</p>
+                            <ul class="products-box--parts">
+                                <li class="products-box--list">デザイン：Adobe XD</li>
+                                <li class="products-box--list">制作：１５日程度</li>
+                            </ul>
+                        </div>
+                        <div class="products-sub--box">
+                            <a class="products-sub--btn" href="#">サイトへ</a>
+                            <a class="products-sub--btn" href="<?php echo esc_url(home_url() . '/f_main'); ?>">詳細へ</a>
+                        </div>
+                    </div>
+                    <div class=" products-box target">
+                                <img class="omusubi" src="<?php echo get_stylesheet_directory_uri() . '/img/omusubi.png'; ?>" alt="">
+                                <div class="products-img--parts"><img class="products-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/products/f-fitness.png" alt="作品画像"></div>
+                                <div>
+                                    <h4 class="products-box--title">パーソナルジムサイト</h4>
+                                    <p class="products-box--text">HTML / CSS / JavaScript</p>
+                                    <ul class="products-box--parts">
+                                        <li class="products-box--list">デザイン：Adobe XD</li>
+                                        <li class="products-box--list">制作：２８日程度</li>
+                                    </ul>
+                                </div>
+                                <div class="products-sub--box">
+                                    <a class="products-sub--btn" href="https://f-fitness.fujichi.com/">サイトへ</a>
+                                    <a class="products-sub--btn" href="<?php echo esc_url(home_url() . '/f_fitness'); ?>">詳細へ</a>
+                                </div>
+                        </div>
+                        <div class="products-box target">
+                            <img class="omusubi" src="<?php echo get_stylesheet_directory_uri() . '/img/omusubi.png'; ?>" alt="">
+                            <div class="products-img--parts"><img class="products-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/products/f-cafe.png" alt="作品画像"></div>
+                            <div>
+                                <h4 class="products-box--title">cafeサイト</h4>
+                                <p class="products-box--text">PHP / CSS / jQuery</p>
+                                <ul class="products-box--parts">
+                                    <li class="products-box--list">デザイン：Adobe XD</li>
+                                    <li class="products-box--list">制作：４１日程度</li>
+                                </ul>
+                            </div>
+                            <div class="products-sub--box">
+                                <a class="products-sub--btn" href="https://f-cafe.fujichi.com/">サイトへ</a>
+                                <a class="products-sub--btn" href="<?php echo esc_url(home_url() . '/f_cafe'); ?>">詳細へ</a>
+                            </div>
+                        </div>
+                        <div class="products-box target">
+                            <img class="omusubi" src="<?php echo get_stylesheet_directory_uri() . '/img/omusubi.png'; ?>" alt="">
+                            <div class="products-img--parts"><img class="products-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/products/f-board.png" alt="作品画像"></div>
+                            <div>
+                                <h4 class="products-box--title">掲示板サイト</h4>
+                                <p class="products-box--text">PHP / CSS</p>
+                                <ul class="products-box--parts">
+                                    <li class="products-box--list">デザイン：Adobe XD</li>
+                                    <li class="products-box--list">制作：２５日程度</li>
+                                </ul>
+                            </div>
+                            <div class="products-sub--box">
+                                <a class="products-sub--btn" href="https://f-board.fujichi.com/">サイトへ</a>
+                                <a class="products-sub--btn" href="<?php echo esc_url(home_url() . '/f_board'); ?>">詳細へ</a>
+                            </div>
+                        </div>
+                        <div class="products-box target">
+                            <img class="omusubi" src="<?php echo get_stylesheet_directory_uri() . '/img/omusubi.png'; ?>" alt="">
+                            <div class="products-img--parts"><img class="products-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/products/f-hotel.png" alt="作品画像"></div>
+                            <div>
+                                <h4 class="products-box--title">ホテルサイト</h4>
+                                <p class="products-box--text">Laravel / CSS / jQuery</p>
+                                <ul class="products-box--parts">
+                                    <li class="products-box--list">デザイン：Adobe XD</li>
+                                    <li class="products-box--list">制作：４４日程度</li>
+                                </ul>
+                            </div>
+                            <div class="products-sub--box">
+                                <a class="products-sub--btn" href="https://f-hotel.fujichi.com/">サイトへ</a>
+                                <a class="products-sub--btn" href="<?php echo esc_url(home_url() . '/f_hotel'); ?>">詳細へ</a>
+                            </div>
+                        </div>
+                        <div class="products-box target">
+                            <img class="omusubi" src="<?php echo get_stylesheet_directory_uri() . '/img/omusubi.png'; ?>" alt="">
+                            <div class="products-img--parts"><img class="products-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/products/f-blog.png" alt="作品画像"></div>
+                            <div>
+                                <h4 class="products-box--title">ブログサイト</h4>
+                                <p class="products-box--text">Wordpress / CSS / JavaScript / PHP</p>
+                                <ul class="products-box--parts">
+                                    <li class="products-box--list">デザイン：Adobe XD</li>
+                                    <li class="products-box--list">制作：１９日程度</li>
+                                </ul>
+                            </div>
+                            <div class="products-sub--box">
+                                <a class="products-sub--btn" href="https://chokotto-amayadori.fujichi.com/">サイトへ</a>
+                                <a class="products-sub--btn" href="<?php echo esc_url(home_url() . '/f_blog'); ?>">詳細へ</a>
+                            </div>
+                        </div>
+                    </div><!-- .grid -->
+                </div><!-- .products-group -->
+            </div><!-- .wrapper -->
+    </section>
 
     <div class="container">
         <section id="production">
@@ -79,11 +188,11 @@ get_header();
             </div>
 
             <div class="process-group">
-                <div class="process-title target">
-                    <div class="process-title--group">
-                        <div class="process-title--parts">
-                            <div class="process-title--items">
-                                <p>process</p>
+                <div class="multi-title target">
+                    <div class="multi-title--group">
+                        <div class="multi-title--parts">
+                            <div class="multi-title--items">
+                                <p>Process</p>
                                 <span>- 過程 -</span>
                             </div>
                         </div>
@@ -210,7 +319,12 @@ get_header();
             </div>
         </div>
 
-        <?php echo do_shortcode('[contact-form-7 id="52" title="Contact form 1"]'); ?>
+        <?php
+        $page_id = 74;
+        $page = get_post($page_id, 'OBJECT', 'raw');
+        $page_include = apply_filters('the_content', $page->post_content);
+        echo $page_include;
+        ?>
     </section>
 </main>
 

@@ -1,12 +1,11 @@
 /* ヘッダー */
 #header {
-    margin: 10px 0;
-
     .sp-menu {
         display: none;
     }
 
     .pc-menu {
+        padding: 10px;
         position: fixed;
         right: 0;
         z-index: 999;
@@ -46,7 +45,6 @@
 // メディアクエリ
 @media screen and (max-width: 800px) {
     #header {
-        margin: 10px 0;
 
         .pc-menu {
             display: none;
@@ -54,20 +52,20 @@
 
         .sp-menu {
             display: initial;
-
+            
             .hamburger {
                 outline: none !important;
-                cursor: pointer;
                 position: fixed;
                 top: 0;
                 right: 0;
+                cursor: pointer;
                 padding-top: 15px;
                 z-index: 999;
 
                 span {
                     display: block;
                     margin-right: 10px;
-                    background-color: black;
+                    background-color: rgb(72, 72, 72);
                     width: 35px;
                     height: 2px;
                     margin-bottom: 9px;
@@ -81,7 +79,7 @@
 
             .mobile-menu {
                 .mobile-menu--parts {
-                    position: absolute;
+                    position: fixed;
                     top: 0;
                     transform: translateX(-100%);
                     width: 100%;

@@ -84,7 +84,7 @@ add_action('wp_head', 'add_favicon');
 function my_script()
 {
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array());
-	wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap', false);
+	wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css2?family=Zen+Kurenaido&family=M+PLUS+1:wght@300&family=Kiwi+Maru&family=Permanent+Marker&family=Playball&family=Kaisei+Opti&display=swap', false);
 	wp_enqueue_style('fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 	wp_enqueue_script('scroll', get_template_directory_uri() . '/js/scroll.js');
 	wp_enqueue_script('intersection', get_template_directory_uri() . '/js/intersection.js');
