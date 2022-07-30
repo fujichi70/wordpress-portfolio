@@ -17,7 +17,7 @@ Template Name: F-Cafe
                 </div>
                 <p class="productspage-sub--text">オンライン注文を簡潔に行うことができるおしゃれなcafeサイトを作りました。</p>
                 <div class="productspage-btn--box">
-                    <a href="#" class="productspage-btn">Web Site</a>
+                    <a href="https://f-cafe.fujichi.com/" class="productspage-btn">Web Site</a>
                 </div>
             </div>
 

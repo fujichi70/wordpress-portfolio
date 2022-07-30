@@ -17,7 +17,7 @@ Template Name: F-Top
                 </div>
                 <p class="productspage-sub--text">どんな人物かすぐわかるようなサイトをつくりました。</p>
                 <div class="productspage-btn--box">
-                    <a href="#" class="productspage-btn">Web Site</a>
+                    <a href="https://fujichi.com/" class="productspage-btn">Web Site</a>
                 </div>
             </div>
 

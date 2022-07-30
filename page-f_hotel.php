@@ -17,7 +17,7 @@ Template Name: F-Hotel
                 </div>
                 <p class="productspage-sub--text">宿泊サイトを見ていてこんなホテルがあったら宿泊したいなと思うサイトを作ろう！<br>と思い立って実装しました。宿泊予約がすぐできるサイトです。</p>
                 <div class="productspage-btn--box">
-                    <a href="#" class="productspage-btn">Web Site</a>
+                    <a href="https://f-hotel.fujichi.com/" class="productspage-btn">Web Site</a>
                 </div>
             </div>
 

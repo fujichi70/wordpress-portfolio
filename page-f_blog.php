@@ -17,7 +17,7 @@ Template Name: F-Blog
                 </div>
                 <p class="productspage-sub--text">日々の出来事をつづるサイトを自分で作ってみようと思い立った、きっかけのサイト</p>
                 <div class="productspage-btn--box">
-                    <a href="#" class="productspage-btn">Web Site</a>
+                    <a href="https://chokotto-amayadori.fujichi.com/" class="productspage-btn">Web Site</a>
                 </div>
             </div>
 
@@ -78,9 +78,9 @@ Template Name: F-Blog
 
         <div class="productspage-end">
             <div class="productspage-point--titles">
-               <i class="fa-solid fa-pencil"></i>
+                <i class="fa-solid fa-pencil"></i>
                 <h3 class="productspage-point--title">作ってみて</h3>
-               <i class="fa-solid fa-pencil"></i>
+                <i class="fa-solid fa-pencil"></i>
             </div>
             <ul>
                 <li>日々の出来事を気ままにつづろうとwordpressにてサイトを開設したのですが、自分が思ったように実装できず、既存のテーマでは上手く実現しませんでした。<br>自分で一から作ってみようと思い立ちプログラミングの勉強をし始めました。</li>

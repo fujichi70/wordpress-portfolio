@@ -17,7 +17,7 @@ Template Name: F-Board
                 </div>
                 <p class="productspage-sub--text">複雑化したこのご時世で女性もより悩みがちに。<br>そんな日々の生活でのふとした悩みを気軽に投稿できるサイトを作りました。</p>
                 <div class="productspage-btn--box">
-                    <a href="#" class="productspage-btn">Web Site</a>
+                    <a href="https://f-board.fujichi.com/" class="productspage-btn">Web Site</a>
                 </div>
             </div>
 
